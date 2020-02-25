@@ -1,0 +1,79 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="YDialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <!-- Base colors -->
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+
+    </style>
+    <style name="AppTheme.Light" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowNoTitle">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="PickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:colorBackground">@color/colorAccent</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="colorAccent">@color/colorIdent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DataPickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextAppearance">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/circe_regular</item>
+    </style>
+
+    <style name="TextAppearanceTab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/circe_regular</item>
+    </style>
+
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/gradient_spinner</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+    <style name="myCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/colorBlack</item>
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="android:textColorTertiary">@color/colorBlack</item>
+        <item name="android:colorBackground">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+    </style>
+
+
+</resources>

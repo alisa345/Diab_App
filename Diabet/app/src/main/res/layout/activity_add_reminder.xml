@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_reminder"
+            style="@style/Toolbar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_reminder_layout_top"
+        android:layout_width="match_parent"
+        android:layout_below="@id/linearLayout"
+        android:layout_height="148dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:background="@color/colorIdentRem"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <EditText
+            android:id="@+id/reminder_title"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="16dp"
+            android:gravity="top|left"
+            android:hint="Добавить напоминание"
+            android:inputType="textCapWords|textMultiLine"
+            android:lines="4"
+            android:minLines="4"
+            android:scrollHorizontally="false"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/primary_text_disabled_material_dark"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/add_reminder_layout_top"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorBack"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:text="Детали"
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp"
+                app:fontFamily="@font/circe_regular" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:onClick="setDate"
+                android:id="@+id/date"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/date_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_view_day"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/date_icon"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Дата"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"
+                        app:fontFamily="@font/circe_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_date"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/circe_regular"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:onClick="setTime"
+                android:id="@+id/time"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_access_time"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/time_icon"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Время"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"
+                        app:fontFamily="@font/circe_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_time"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/circe_regular"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/repeat"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/repeat_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_sync"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/repeat_ll"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/repeat_icon"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/repeat_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Повтор"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"
+                        app:fontFamily="@font/circe_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_repeat"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/circe_regular"/>
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/repeat_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:onClick="onSwitchRepeat"
+                    android:checked="true"
+                    android:textOn="On"
+                    android:textOff="Off"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/RepeatNo"
+                android:clickable="true"
+                android:onClick="setRepeatNo"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/repeat_no_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_unfold"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/repeat_no_icon"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/repeat_no_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Интервал повторения"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"
+                        app:fontFamily="@font/circe_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_repeat_no"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/circe_regular"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/RepeatType"
+                android:clickable="true"
+                android:onClick="selectRepeatType"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="72dp">
+
+                <ImageView
+                    android:id="@+id/repeat_type_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_subject"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/repeat_type_icon"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/repeat_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Частота повторения"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"
+                        app:fontFamily="@font/circe_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/set_repeat_type"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/circe_regular"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/starred1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        fab:fab_icon="@drawable/ic_notifications_off_grey600_24dp"
+        fab:fab_colorNormal="@color/colorIdent"
+        fab:fab_colorPressed="@color/fab_pressed"
+        app:fab_size="normal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="168dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:theme="@style/Theme.AppCompat"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/starred2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        fab:fab_icon="@drawable/ic_notifications_on_white_24dp"
+        fab:fab_colorNormal="@color/colorIdent"
+        fab:fab_colorPressed="@color/fab_pressed"
+        app:fab_size="normal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="168dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:theme="@style/Theme.AppCompat"/>
+
+</RelativeLayout>

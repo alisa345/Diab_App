@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".NewNoteActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            style="@style/Toolbar" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:text="дата"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewTime" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:text="время"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dataText" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:text="самочувствие"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:text="введенный инсулин (ед)"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:text="вес"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInsulin" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:text="заметки"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:text="хлебные единицы"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/textInsulin" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:text="прием пищи"
+                android:textAppearance="@android:style/TextAppearance.Material"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:fontFamily="@font/circe_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.41"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/dataText" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardViewTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBack"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBack"
+                    android:orientation="vertical">
+
+                    <com.lantouzi.wheelview.WheelView
+                        android:id="@+id/wheelView"
+                        android:layout_width="match_parent"
+                        android:layout_height="98dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/circe_light"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textSugar2"
+                        app:lwvHighlightColor="@color/colorBlack"
+                        app:lwvIntervalFactor="1.2"
+                        app:lwvMarkColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="289dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/circe_regular"
+                        android:text="Уровень сахара"
+                        android:textAlignment="center"
+                        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/giper_or_gipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/circe_regular"
+                        android:textAlignment="center"
+                        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                        android:textColor="@color/md_deep_orange_A700"
+                        android:textSize="0sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/textSugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/circe_regular"
+                        android:text="0.0"
+                        android:textAppearance="@android:style/TextAppearance.Material.Small"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintEnd_toStartOf="@+id/textSugar2"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/giper_or_gipo" />
+
+                    <TextView
+                        android:id="@+id/textSugar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="150dp"
+                        android:fontFamily="@font/circe_regular"
+                        android:text="ммоль/л"
+                        android:textAppearance="@android:style/TextAppearance.Material.Small"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="italic"
+                        app:layout_constraintBottom_toBottomOf="@+id/textSugar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/giper_or_gipo"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <EditText
+                android:id="@+id/dataText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:backgroundTint="#1c1d1d26"
+                android:textAlignment="textStart"
+                android:ems="10"
+                android:fontFamily="@font/circe_regular"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:windowSoftInputMode="stateHidden"
+                app:fontFamily="@font/circe_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <EditText
+                android:id="@+id/timeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#1c1d1d26"
+                android:ems="10"
+                android:fontFamily="@font/circe_regular"
+                android:inputType="time"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:windowSoftInputMode="stateHidden"
+                app:fontFamily="@font/circe_regular"
+                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <RadioButton
+                    android:id="@+id/radio_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/colorBlack"
+                    android:clickable="true"
+                    android:fontFamily="@font/circe_regular"
+                    android:text="плохое"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="@font/circe_regular" />
+
+                <RadioButton
+                    android:id="@+id/radio_two"
+                    style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/colorBlack"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:fontFamily="@font/circe_regular"
+                    android:text="нормальное"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="@font/circe_regular" />
+
+                <RadioButton
+                    android:id="@+id/radio_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/colorBlack"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:fontFamily="@font/circe_regular"
+                    android:text="хорошее"
+                    android:textColor="@color/colorBlack"
+                    app:fontFamily="@font/circe_regular" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/textInsulin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#1c1d1d26"
+                android:ems="10"
+                android:fontFamily="@font/circe_regular"
+                android:inputType="number"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:windowSoftInputMode="stateHidden"
+                app:fontFamily="@font/circe_regular"
+                app:layout_constraintEnd_toStartOf="@+id/textView17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <EditText
+                android:id="@+id/editText11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#1c1d1d26"
+                android:ems="10"
+                android:fontFamily="@font/circe_regular"
+                android:inputType="number"
+                android:textColor="@color/colorBlack"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:fontFamily="@font/circe_regular"
+                android:windowSoftInputMode="stateHidden"
+                app:layout_constraintEnd_toStartOf="@+id/textView17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="31dp"
+                android:backgroundTint="#1c1d1d26"
+                android:ems="10"
+                android:fontFamily="@font/circe_regular"
+                android:textAlignment="textStart"
+                android:inputType="number"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:fontFamily="@font/circe_regular"
+                android:windowSoftInputMode="stateHidden"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/editText11"
+                app:layout_constraintTop_toTopOf="@+id/editText11" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="31dp"
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="#1c1d1d26"
+                android:textColor="@color/colorBlack"
+                app:fontFamily="@font/circe_regular"
+                app:layout_constraintBottom_toBottomOf="@+id/textInsulin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toEndOf="@+id/textInsulin"
+                app:layout_constraintTop_toTopOf="@+id/textInsulin"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Spinner
+                android:id="@+id/spinnerEat"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="31dp"
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="#1c1d1d26"
+                android:textColor="@color/colorBlack"
+                app:fontFamily="@font/circe_regular"
+                app:layout_constraintBottom_toTopOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/timeText"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+            <EditText
+                android:id="@+id/noteText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="31dp"
+                android:backgroundTint="#1c1d1d26"
+                android:ems="10"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/circe_regular"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:windowSoftInputMode="stateHidden"
+                app:fontFamily="@font/circe_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

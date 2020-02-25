@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Диабет</string>
+    <string name="item_home">Дневник сновидений</string>
+    <string name="item_note">Добавить запись</string>
+    <string name="item_dnev">Дневник</string>
+    <string name="item_graf">Графики</string>
+    <string name="item_notif">Напоминания</string>
+    <string name="item_akk">Аккаунт</string>
+    <string name="repeat_off">Выключено</string>
+    <string name="item_help">Помощь</string>
+    <string name="top_sugar">У вас гипергликемия!</string>
+    <string name="down_sugar">У вас гипогликемия!</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_save_reminder">Сохранить напоминание</string>
+    <string name="action_discard_reminder">Отменить напоминание</string>
+    <string name="title_activity_edit_reminder">Редактировать напоминание</string>
+</resources>
